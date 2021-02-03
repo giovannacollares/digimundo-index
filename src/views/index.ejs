@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Digimundo Index</title>
+    <link rel="sortcut icon" href="favicon.ico" type="image/x-icon" />
+
+      <!--estilização-->
+      <style>
+        @import url('https://fonts.googleapis.com/css?family=Chakra+Petch&effect=neon|fire|shadow-multiple');
+
+        body {
+            background-image: url("https://wallpaperaccess.com/full/1186567.jpg");
+            background-color: blue;
+            background-size: cover;
+            background-attachment: fixed;
+
+            margin-top: 7%;
+
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(1px) saturate(100%) contrast(45%) brightness(130%);
+
+            border: 1px solid transparent;
+            border-radius: 15px;
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+            transition: 0.2s;
+
+            width: 50%;
+            height: 70vh;
+            
+            margin: auto;
+            text-align: center;
+            }
+
+            .card:hover {
+                box-shadow: 0 0 6rem 0 rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(5px) saturate(100%) contrast(45%) brightness(130%);
+            }
+
+            h3 {
+                font-family: 'Chakra Petch', sans-serif;
+                font-weight: 400;
+                font-size: 8vh;
+            }
+
+            label {
+                font-family: 'Chakra Petch', sans-serif;
+                font-weight: 300;
+                font-size: larger;
+            }
+
+            .form-input {
+               font-size: medium;
+
+                border-radius: 10px;
+                border: #fff;
+
+                padding: 1vh 10vh 1vh 10vh;
+                transition:0.3s;
+            }
+            .form-input:focus {
+                border: 3px solid #555;
+
+            }
+            .form {
+                    padding: 0vh 0vh 2vh 0vh;
+                }
+
+            .button {
+            background-color: rgba(19, 94, 255, 0.808);
+            color: cornsilk;
+
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: medium;
+            font-weight: 600;
+
+            border-radius: 10px;
+            border:none;
+
+            transition: 0.3;
+            cursor: pointer;
+            text-decoration: none;
+
+            padding: 1vh 4vh 1vh 4vh;
+            margin: 1vh;
+            }
+
+            .button:hover {
+            background-color: rgba(255, 44, 44, 0.747);
+            }
+
+            @media screen and (max-width: 500px) {
+      
+                body {
+                background-image: url("https://mfiles.alphacoders.com/676/676254.png");
+                }
+
+                .card {
+                    width: 50vh;
+                }
+                
+                h3 {
+                    font-size: xx-large;
+                }
+                label {
+                    font-size: large;
+                }
+                .button {
+                    padding: 1vh 2vh 1vh 2vh;
+                }
+                .form-input {
+                    padding: 1vh 2vh 1vh 2vh;
+                }
+                .form {
+                    padding: 2vh;
+                }
+                }
+      </style>
+</head>
+
+<body>
+        <div class="card">
+                <h3 class="font-effect-shadow-multiple">DIGIMUNDO INDEX</h3>           
+                <div class="form">
+                <form action="/search-by-name" method="POST">
+                              <label for="name">Busque por Digimon:</label><br>
+                              <input class="form-input" type="text" name="name" id="name"><br>
+                              <input type="submit" class="button" value="Buscar">
+                </form>
+                </div>
+                <div class="form"></div>
+                <form action="/search-by-level" method="POST">
+                                <label for="level">Ou procure pelo seu level:</label><br>
+                                <input class="form-input" type="text" name="level" id="level"><br>
+                                <input type="submit" class="button" value="Buscar">
+                 </form>
+                </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="sortcut icon" href="../../images/favicon.ico" type="image/x-icon" />
+  <title>Digimundo Index</title>
+
+  <!--estilização-->
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Chakra+Petch&effect=neon|fire|shadow-multiple');
+
+    body {
+        background-image: url("https://wallpaperaccess.com/full/1186567.jpg");
+        background-color: blue;
+        background-size: cover;
+        background-attachment: fixed;
+
+        margin-top: 7%;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(1px) saturate(100%) contrast(45%) brightness(130%);
+
+        border: 1px solid transparent;
+        border-radius: 15px;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+        transition: 0.2s;
+
+        width: 50%;
+        
+        display: block;
+        margin: auto;
+        padding-bottom: 5%;
+        text-align: center;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 6rem 0 rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px) saturate(100%) contrast(45%) brightness(130%);
+        }
+
+        h3 {
+                font-family: 'Chakra Petch', sans-serif;
+                font-weight: 500;
+                font-size: 8vh;
+            }
+
+        p {
+            font-family: 'Chakra Petch', sans-serif;
+            font-weight: 300;
+            font-size:x-large;
+
+            text-align: center;
+        }
+
+        img {
+          text-align: center;
+          width:20vh;
+
+          border-radius: 50%;
+        }
+
+        .button-s {
+          background-color: rgba(187, 187, 187, 0.473);
+          color: cornsilk;
+
+          font-family: 'Chakra Petch', sans-serif;
+          font-size: medium;
+          font-weight: 600;
+
+          border-radius: 10px;
+          border:none;
+
+          transition: 0.3;
+          cursor: pointer;
+          text-decoration: none;
+
+          padding: 1vh 4vh 1vh 4vh;
+        }
+
+        .button-b {
+          background-color: rgba(19, 94, 255, 0.808);
+          color: cornsilk;
+
+          font-family: 'Chakra Petch', sans-serif;
+          font-size: medium;
+          font-weight: 600;
+
+          border-radius: 10px;
+          border:none;
+
+          transition: 0.3;
+          cursor: pointer;
+          text-decoration: none;
+
+          padding: 1vh 4vh 1vh 4vh;
+        }
+
+        .button-s:hover {
+          background-color: rgba(19, 94, 255, 0.808);
+        }
+
+        @media screen and (max-width: 500px) {
+      
+          body {
+          background-image: url("https://mfiles.alphacoders.com/676/676254.png");
+          }
+
+          .card {
+            width: max-content;
+          }
+          
+          h3 {
+              font-size: xx-large;
+          }
+
+          .button-s, .button-b {
+            padding: 1vh 2vh 1vh 2vh;
+          }
+        }
+
+  </style>
+ 
+</head>
+<body>
+        <div class="card"> 
+          <% for(var i = 0; i < dado.length; i++) { %>
+            <h3 class="font-effect-shadow-multiple"><%= dado[i].name %></h3>
+            <img src="<%= dado[i].img %>" alt="<%= dado[i].name %>" />
+          <p>Level: <strong class="font-effect-fire"><%= dado[i].level %></strong></p>
+          <a class="button-s" href="https://www.google.com/search?q=<%= dado[i].name %>">Saiba mais sobre <%= dado[i].name %></a>
+          <a class="button-b" href="/">Voltar</a>
+          <% } %>
+        </div>
+
+  
+</body>
+</html>
