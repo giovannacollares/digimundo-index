@@ -34,4 +34,4 @@ app.post('/search-by-level', async (req, res) => {
   console.log(resultado)
 })
 
-app.listen(3333)
+app..listen(process.env.PORT || 3333)
